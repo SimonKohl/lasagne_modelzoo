@@ -10,7 +10,12 @@ from collections import OrderedDict
 
 def build_net(input_dim=572, no_channels=3, seg_entities=2):
     """Implementation of 'U-Net: Convolutional Networks for Biomedical Image Segmentation',
-       https://arxiv.org/pdf/1505.04597.pdf"""
+       https://arxiv.org/pdf/1505.04597.pdf
+
+    :param input_dim: x and y dimensions of 3D input
+    :param no_channels: z dimension of 3D input
+    :param seg_entities: number of classes to segment, i.e. number of categories per pixel for the softmax function
+    """
 
     nonlin = rectify
     pad = 'valid'
